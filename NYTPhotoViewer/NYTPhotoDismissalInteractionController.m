@@ -28,7 +28,7 @@ static const CGFloat NYTPhotoDismissalInteractionControllerReturnToCenterVelocit
     CGPoint newCenterPoint = CGPointMake(anchorPoint.x + translatedPanGesturePoint.x, anchorPoint.y + translatedPanGesturePoint.y);
 
     // Pan the view on pace with the pan gesture.
-    viewToPan.center = newCenterPoint;
+    viewToPan.center = CGPointMake(viewToPan.center.x, newCenterPoint.y);
     
     CGFloat verticalDelta = newCenterPoint.y - anchorPoint.y;
     
